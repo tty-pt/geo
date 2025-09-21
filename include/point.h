@@ -64,7 +64,7 @@ point_idx(int16_t *p, int16_t *s, int16_t *e, uint8_t dim)
 
 	uint64_t res = 0, mul = 1;
 
-	for (uint8_t i = 0; i < dim; i++, mul *= l[i])
+	for (uint8_t i = 0; i < dim; mul *= l[i], i++)
 		res += ps[i] * mul;
 
 	return res;
